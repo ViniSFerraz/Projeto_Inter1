@@ -1,0 +1,163 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body{
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+
+/* area navbar */
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.nav-item{
+    color: rgb(0, 0, 0);
+}
+
+.navbar-brand img.navbar-logo {
+    width: 150px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-brand img.navbar-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.Login-button{
+    background-color:  #0d6efd;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+
+}
+.Login-button:hover{
+    background-color: rgba(0, 0, 255, 0.717);
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #0d6efd;
+}
+
+.offcanvas{
+    background-color: black;
+}
+
+
+
+.hero-section1 {
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card-img-top{
+    border-radius: 5%;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/*seção de depoimentos */
+
+#testimonials blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ffffff;
+}
+
+#testimonials footer {
+    font-size: 1rem;
+    color: #999999;
+}
+
+/* Estilo do carousel */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev {
+    left: -5%;
+}
+
+.carousel-control-next {
+    right: -5%;
+}
+
+.carousel-control-icon {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/*formulário de contato */
+
+#contact .form-control {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #333333;
+}
+
+#contact .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+

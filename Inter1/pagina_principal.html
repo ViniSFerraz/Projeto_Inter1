@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="pasta_css/principal_style.css">
+    <link rel="stylesheet" href="pasta_javascript/script1.js">
+<body>
+
+    <!-- area Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="pagina_principal.html">
+            <img class="navbar-logo" src="imagens/logo_grande.png" alt="">
+          </a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: white;">Welcome</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2 " aria-current="page" href="pagina_principal.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="pagina_ods.html">Meio Ambiente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="pagina_carrinho.html">Carrinho
+                      <i class="bi bi-cart3"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="pagina_ajuda.html">Ajuda</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="pagina_login.html" class="Login-button">Login/Cadastro</a>
+          <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+    </nav>
+
+    <!-- inicio -->
+    <section class="hero-section1">
+        <header class="banner">
+            <div class="container text-center pt-5">
+                <h1 class="display-4">Bem-vindo à Edy Palletes</h1>
+                <p class="lead">Móveis artesanais feitos com a melhor madeira.</p>
+                <a href="#products" class="btn btn-primary btn-lg">Ver Produtos</a>
+            </div>
+        </header>
+    </section>
+
+
+<!-- Sobre -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sobre Nós</h2>
+                <p>Somos uma loja especializada em móveis de madeira feitos à mão. Cada peça é única e feita com o maior cuidado para garantir qualidade e durabilidade.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imagens/aplicação em cartões - 2.jpg" class="img-fluid" alt="Sobre a loja" style="border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+
+
+<!-- produtos 1 -->
+<section id="products" class="py-5 bg-black text-white">
+    <div class="container">
+        <h2 class="text-center" style="margin-bottom: 40px;">Nossos Produtos</h2>
+        <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="imagens/produto1.jfif" class="card-img-top" alt="Produto 1">
+                                <div class="card-body">
+                                    <h4 class="card-title">jardineira Vertical</h4>
+                                    <p class="card-text">
+                                    Uma bela opção para expor suas plantas ocupando pouco espaço.
+                                        <h5> por apenas: 149,99</h5>
+                                    </p>
+                                    <button class="btn btn-primary comprar" data-id="1" data-nome="jardineira Vertical"
+                                    data-preco="149,99">Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="imagens/produto2.jfif" class="card-img-top" alt="Produto 2">
+                                <div class="card-body">
+                                    <h4 class="card-title">Cadeira de Madeira</h4>
+                                    <p class="card-text">
+                                    Cadeira confortável e durável, ideal para salas de convivencia.
+                                       <h5> por apenas: 399,99</h5>
+                                    </p>
+                                    <button class="btn btn-primary comprar" data-id="2" data-nome="Cadeira de Madeira"
+                                    data-preco="399,99">Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="imagens/produto3.jfif" class="card-img-top" alt="Produto 3">
+                                <div class="card-body">
+                                    <h4 class="card-title">Suporte Para Temperos</h4>
+                                    <p class="card-text">
+                                    Um belo supote para colocar seus temperos prediletos.
+                                        <h5> por apenas: 139,59</h5>
+                                    </p>
+                                    <button class="btn btn-primary comprar" data-id="3" data-nome="Suporte Para Temperos"
+                                    data-preco="139,59">Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="imagens/produto4.jfif" class="card-img-top" alt="Produto 4">
+                                <div class="card-body">
+                                    <h4 class="card-title">Mesa de Canto</h4>
+                                    <p class="card-text">
+                                    Uma otima opção para colocar na sua sala ou até do lado de sua cama. 
+                                        <h5> por apenas: 499,89</h5>
+                                    </p>
+                                    <button class="btn btn-primary comprar" data-id="4" data-nome="Mesa de Canto"
+                                    data-preco="499,89">Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="imagens/produto5.jfif" class="card-img-top" alt="Produto 5">
+                                <div class="card-body">
+                                    <h4 class="card-title">jardineira Vertical 2</h4>
+                                    <p class="card-text">
+                                    Uma jardineira maior, para aqueles grandes amantes de planta.
+                                        <h5> por apenas: 199,99</h5>    
+                                    </p>
+                                    <button class="btn btn-primary comprar" data-id="5" data-nome="jardineira Vertical 2"
+                                    data-preco="199,99">Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="imagens/produto6.jfif" class="card-img-top" alt="Produto 6">
+                                <div class="card-body">
+                                    <h4 class="card-title">Suporte Para Bebidas</h4>
+                                    <p class="card-text">
+                                    Um belo suporte para colocar bebidas de bom gosto.
+                                        <h5> por apenas: 186,99</h5>
+                                    </p>
+                                    <button class="btn btn-primary comprar"  data-id="6" data-nome="Suporte Para Bebidas"
+                                    data-preco="186,99">Adicionar ao carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#product-carousel" role="button" data-slide="prev">
+                <i class="bi bi-arrow-left-square-fill carousel-control-icon" style="color: rgb(255, 255, 255);"></i>
+            </a>
+            <a class="carousel-control-next" href="#product-carousel" role="button" data-slide="next">
+                <i class="bi bi-arrow-right-square-fill carousel-control-icon" style="color: rgb(255, 255, 255);"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Depoimentos -->
+<section id="testimonials" class="py-5 pt-5">
+    <div class="container">
+        <h2 class="text-center pt-5">Depoimentos</h2>
+        <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-4">"Os móveis são incríveis! Qualidade excelente e design maravilhoso. Recomendo a todos."</p>
+                        <footer class="blockquote-footer">Maria Silva</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-4">"Comprei uma mesa de jantar e estou completamente apaixonado. Trabalho artesanal impecável."</p>
+                        <footer class="blockquote-footer">João Souza</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-4">"Atendimento excelente e móveis de altíssima qualidade. Superou minhas expectativas!"</p>
+                        <footer class="blockquote-footer">Ana Oliveira</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- aplicacaoes basicas -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Aplicações Básicas</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4" style="background-color: black;">
+        <div class="col">
+            <div class="card">
+                <img src="imagens/aplicacao5.jpg" class="card-img-top img-fluid" alt="Aplicação 5">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="imagens/aplicação em cartões.jpg" class="card-img-top img-fluid" alt="Aplicação 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contato -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center pb-5">Contato</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Nosso Endereço</h5>
+                <p>Rua Exemplo, 123<br>Cidade, Estado, CEP 12345-678</p>
+                <h5>Email</h5>
+                <p>contato@lojamoveis.com</p>
+                <h5>Telefone</h5>
+                <p>(11) 1234-5678</p>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" placeholder="Seu Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Seu Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Sua Mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="bg-black text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">© 2024 Loja de Móveis de Madeira. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <!-- boostrap js -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-wEa4gl7HUl25YGj9qS19U+5Ax0Xk5cHmiEh5K9FstlRYH5z+y4DA2jxI5xbrbAyk"
+   crossorigin="anonymous"></script>
+
+
+   <script>
+// funcao para adicionar no carrinho
+    const cart = [];
+    document.querySelectorAll('.comprar').forEach(button => {
+        button.addEventListener('click', () => {
+            const id = button.getAttribute('data-id');
+            const nome = button.getAttribute('data-nome');
+            const preco = parseFloat(button.getAttribute('data-preco'));
+            addToCart(id, nome, preco);
+        });
+    });
+
+    function addToCart(id, nome, preco) {
+        const itemIndex = cart.findIndex(item => item.id === id);
+        if (itemIndex > -1) {
+            cart[itemIndex].quantidade += 1;
+        } else {
+            cart.push({ id, nome, preco, quantidade: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+   </script>
+</body> 
+</html>

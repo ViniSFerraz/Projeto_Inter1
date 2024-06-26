@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="pasta_css/carrinho_style.css">
+</head>
+
+<body>
+    <!-- area Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="pagina_principal.html">
+                <img class="navbar-logo" src="imagens/logo_grande.png" alt="">
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: white;">Welcome</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 " aria-current="page" href="pagina_principal.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="pagina_ods.html">Meio Ambiente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="pagina_carrinho.html">Carrinho
+                                <i class="bi bi-cart3"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="pagina_ajuda.html">Ajuda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="pagina_login.html" class="Login-button">Login/Cadastro</a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Carrinho -->
+    <section id="carrinho" class="py-5 mt-5">
+        <div class="container">
+            <h2 class="text-center">Carrinho de Compras</h2>
+            <div id="cart-items" class="mt-4"></div>
+            <div class="text-end mt-4">
+                <h4>Total: R$ <span id="total-price">0.00</span></h4>
+                <button class="btn btn-success mt-3" onclick="limparCarrinho()">Limpar Carrinho</button>
+                <button class="btn btn-primary mt-3">Finalizar Compra</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-wEa4gl7HUl25YGj9qS19U+5Ax0Xk5cHmiEh5K9FstlRYH5z+y4DA2jxI5xbrbAyk"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function renderCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                total += item.preco * item.quantidade;
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('row', 'mb-3');
+                cartItem.innerHTML = `
+                    <div class="col-6">${item.nome}</div>
+                    <div class="col-2">${item.quantidade}</div>
+                    <div class="col-2">R$ ${item.preco.toFixed(2)}</div>
+                    <div class="col-2">R$ ${(item.preco * item.quantidade).toFixed(2)}</div>
+                    <div class="col-12 text-end mt-2">
+                        <button class="btn btn-sm btn-danger" onclick="removerItem(${item.id})">Remover</button>
+                    </div>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            document.getElementById('total-price').innerText = total.toFixed(2);
+        }
+
+        function removerItem(id) {
+            const index = cart.findIndex(item => item.id === id);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+            }
+        }
+
+        function limparCarrinho() {
+            localStorage.removeItem('cart');
+            cart.length = 0;
+            renderCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+
+</body>
+
+</html>
